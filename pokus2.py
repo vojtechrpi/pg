@@ -13,11 +13,11 @@
 #    return prumer
 # funkce naformatuje retezec, aby vratila text ve formatu:
 # "Jmeno: Jan, Prijmeni: Novak, Vek: 20, Prumerna znamka: 2.5"
-def naformatuj_text(slovnik):
-    jmeno = slovnik["jmeno"]
-    prijmeni = slovnik["prijmeni"]
-    vek = slovnik["vek"]
-    prumer = round(sum(slovnik["znamky"])/int(len(slovnik["znamky"])),2)
+def naformatuj_text(student):
+    jmeno = student["jmeno"]
+    prijmeni = student["prijmeni"]
+    vek = student["vek"]
+    prumer = round(sum(student["znamky"])/int(len(student["znamky"])),2)
     return f"Jmeno: {jmeno}, Prijmeni: {prijmeni}, Vek: {vek}, Prumerna znamka: {prumer}"
 
 
