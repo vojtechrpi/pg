@@ -17,8 +17,8 @@ def vrat_prvocisla(maximum):
         if je_prvocislo(i):
             seznam.append(i)
  
-    print(seznam)
+    return(seznam)
 
 
 print(je_prvocislo(5))
-vrat_prvocisla(10)
+print(vrat_prvocisla(10))
