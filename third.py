@@ -1,6 +1,3 @@
-vloz = int(input("Zadej cislo: "))
-vloz2 = int(input("Zadej konecne cislo: "))
-
 def je_prvocislo(cislo):
     delitel = 2
     while delitel < cislo:
@@ -23,11 +20,5 @@ def vrat_prvocisla(maximum):
     print(seznam)
 
 
-if je_prvocislo(vloz):
-    print("True")
-else:
-    print("False")
-
-
-je_prvocislo(vloz)
-vrat_prvocisla(vloz2)
+print(je_prvocislo(5))
+vrat_prvocisla(10)
