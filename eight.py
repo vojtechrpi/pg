@@ -24,7 +24,7 @@ def test_funkce():
 if __name__ == "__main__":
     # Test konkrétního čísla
     print(f"10011101 -> {bin_to_dec('10011101')}")  # Mělo by vypsat 157
-    print(f"010101 -> {bin_to_dec('010101')}")  # Mělo by vypsat 157
+    print(f"010101 -> {bin_to_dec('010101')}")  # Mělo by vypsat 21
     
     # Spustíme testy
     test_funkce()
