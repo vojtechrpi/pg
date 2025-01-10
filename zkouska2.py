@@ -2,23 +2,20 @@ import requests
 
 def convert_to_czk(amount, currency):
     try:
-        # Stáhnout kurzovní lístek
         url = "http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt"
         response = requests.get(url)
-        response.raise_for_status()  # Zkontrolovat chyby při stahování
+        response.raise_for_status()
 
-        # Načíst obsah odpovědi
         rates = response.text.splitlines()
 
-        # Najít odpovídající měnu v kurzovním lístku
-        for line in rates[2:]:  # Přeskakujeme hlavičku
+        for line in rates[2:]: 
             parts = line.split('|')
-            print(parts)  # Ladící tisk jednotlivých částí
-            if parts[3] == currency:  # Porovnání s kódem měny
+            print(parts)  
+            if parts[3] == currency: 
                 amount_in_czk = float(parts[4].replace(',', '.')) / int(parts[2]) * amount
                 return round(amount_in_czk, 2)
 
-        # Pokud měna není nalezena, vyhodit výjimku
+
         raise ValueError(f"Currency {currency} not found in the exchange rate list.")
     except Exception as e:
         raise ValueError(f"An error occurred: {e}")

@@ -5,13 +5,13 @@
 # Pokud seznam obsahuje řetězec "STOP", ukončete zpracování seznamu a vraťte dosud vytvořený seznam.
 
 def process_strings(strings):
-    result = []  # Vytvořit prázdný seznam pro výsledky
+    result = [] 
     for string in strings:
-        if string == "STOP":  # Zkontrolovat, zda je řetězec "STOP"
-            break  # Ukončit zpracování
-        if len(string) > 3:  # Zkontrolovat, zda je řetězec delší než 3 znaky
-            result.append(string.upper())  # Převést na velká písmena a přidat do výsledků
-    return result  # Vrátit výsledný seznam
+        if string == "STOP": 
+            break 
+        if len(string) > 3:
+            result.append(string.upper())
+    return result
 
 # Pytest testy pro Příklad 2
 def test_process_strings():
